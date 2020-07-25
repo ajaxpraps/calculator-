@@ -1,0 +1,60 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: linear-gradient(to right,green ,rgb(78, 136, 212));
+}
+
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px ,auto) repeat(5,100px);
+    border: 10px solid black;
+}
+.calculator button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid white;
+    outline: none;
+    background-color:rgba(67, 194, 226, 0.651);
+
+}
+
+.calculator button:hover{
+    background-color: white;
+}
+
+.output{
+    grid-column: span 4;
+    background-color: rgba(248, 242, 242, 0.644);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+
+}
+
+.span-2{
+    grid-column: span 2;
+}
+.output .screen1{
+
+    color: gray;
+    font-size: 1.5rem;
+}
+.output .screen2{
+    
+    color:white;
+    font-size: 2.5rem;
+}
